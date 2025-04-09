@@ -1,0 +1,16 @@
+// Useful System-Related Commands
+lsb_release -a		// Check Ubuntu version
+uname -r		// Check Kernel
+
+// Docker
+// sudo usually necessary, $CONTAINER_ID can be inferred from just enough characters for it to be unique
+sudo dokcer compose up -d 			// Start containers from .yml in same directory, -d to run as daemon (won't stop on terminal exit)
+sudo docker logs --since=1h $CONTAINER_ID	// Check logs for a given $CONTAINER_ID (often contains session passwords)
+sudo docker ps --all				// Check statuses & IDs of Docker containers
+sudo docker rm $CONTAINER_ID			// Remove specified container
+sudo docker stop $CONTAINER_ID			// Stop a specified container 
+
+// UFW (Uncomplicated Firewall) Commands
+sudo ufw disable	// Start firewall
+sudo ufw enable		// Stop firewall
+sudo ufw status		// See firewall status and rules
