@@ -1,0 +1,20 @@
+---
+services:
+  slskd:
+    image: slskd/slskd
+    container_name: slskd
+    ports:
+      - "5030:5030"
+      - "5031:5031"
+      - "50300:50300"
+    environment:
+      - TZ=Etc/UTC
+      - SLSKD_REMOTE_CONFIGURATION=true
+      - SLSKD_SHARED_DIR=/data/shared
+    volumes:
+      - ./slskd-config:/config
+      - /mnt/wwn-0x50014ee267eff8dc-part1/Media/Music:/data/shared
+      - /mnt/wwn-0x50014ee267eff8dc-part1/Media/Slskd/downloads:/slskd-downloads
+      - /mnt/wwn-0x50014ee267eff8dc-part1/Media/Slskd/incomplete:/slskd-incomplete
+    restart: always
+

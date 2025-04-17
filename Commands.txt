@@ -10,7 +10,13 @@ sudo docker ps --all				// Check statuses & IDs of Docker containers
 sudo docker rm $CONTAINER_ID			// Remove specified container
 sudo docker stop $CONTAINER_ID			// Stop a specified container 
 
-// UFW (Uncomplicated Firewall) Commands
+/* UFW (Uncomplicated Firewall) Commands */
 sudo ufw disable	// Start firewall
 sudo ufw enable		// Stop firewall
 sudo ufw status		// See firewall status and rules
+
+/* Valgrind */
+valgrind ./main		// Run valgrind on a compiled C program
+--leak-check=full	//
+--show-leak-kinds=all	//
+--track-origins=yes	//
