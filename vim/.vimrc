@@ -8,10 +8,10 @@ set noswapfile		" turn off swap files
 set shiftwidth=4	" 1 of 4 settings to safely make tabs look normal
 set so=5		" sets number of lines above/below current while scrolling
 set softtabstop=0	" 1 of 4 settings to safely make tabs look normal
-set updatetime=150	" amount of time after typing until plugins are triggered
+set updatetime=100	" amount of time after typing until plugins are triggered
 set tabstop=8		" 1 of 4 settings to safely make tabs look normal
 set wrap		" probably superfluous but enables text-wrapping
-syntax on
+syntax on               " turn on colorful syntax highlighting
 
 " Settings for Plugin  Appearance
 :let g:NERDTreeWinSize=20	" set NERDTree width to 20 columns
@@ -27,6 +27,6 @@ autocmd VimEnter * GitGutterEnable	" turn on GitGutter
 " https://github.com/airblade/vim-gitgutter
 " https://github.com/preservim/nerdtree
 call plug#begin()
-	Plug 'preservim/nerdtree'
 	Plug 'airblade/vim-gitgutter'
+	Plug 'preservim/nerdtree'
 call plug#end()
